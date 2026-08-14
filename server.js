@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
@@ -9,8 +10,13 @@ const PORT = 3000;
 // MIDDLEWARE
 // ==========================================
 
+// Permitir conexiones desde Netlify
+app.use(cors());
+
+// Permitir recibir datos en formato JSON
 app.use(express.json());
 
+// Permitir archivos estáticos
 app.use(express.static("."));
 
 
@@ -82,7 +88,7 @@ app.post("/api/pedidos", (req, res) => {
 
   console.log("");
   console.log("================================");
-  console.log("NUEVO PEDIDO");
+  console.log("📦 NUEVO PEDIDO");
   console.log("================================");
 
   console.log(req.body);
@@ -90,16 +96,13 @@ app.post("/api/pedidos", (req, res) => {
   console.log("================================");
   console.log("");
 
-
   res.status(201).json({
 
     ok: true,
 
-    mensaje:
-      "Pedido recibido correctamente",
+    mensaje: "Pedido recibido correctamente",
 
-    pedido:
-      req.body
+    pedido: req.body
 
   });
 
