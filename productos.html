@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Productos | Farmacia Cormar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/productos.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="img/farma.png" alt="Logo de Farmacia Cormar" />
+      </a>
+
+      <nav>
+        <a href="index.html#servicios">Servicios</a>
+
+        <a href="productos.html">Productos</a>
+
+        <a href="carrito.html">🛒 Carrito</a>
+
+        <a href="index.html#horarios">Horarios</a>
+
+        <a href="index.html#ubicacion">Ubicación</a>
+
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="catalogo">
+        <div class="catalogo-header">
+          <p class="eyebrow">Farmacia Cormar</p>
+
+          <h1>Nuestros productos</h1>
+
+          <p>
+            Encontrá medicamentos, productos de cuidado personal, perfumería y
+            más.
+          </p>
+        </div>
+
+        <div class="catalogo-controles">
+          <input
+            type="search"
+            id="buscador"
+            placeholder="Buscar producto..."
+            aria-label="Buscar producto"
+          />
+
+          <select id="filtroCategoria" aria-label="Filtrar por categoría">
+            <option value="todos">Todas las categorías</option>
+            <option value="medicamentos">Medicamentos</option>
+            <option value="perfumeria">Perfumería</option>
+            <option value="cuidado">Cuidado personal</option>
+          </select>
+        </div>
+
+        <div id="productos" class="productos-grid">
+          <!-- JavaScript va a cargar los productos acá -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Farmacia Cormar — Juan Lacaze, Departamento de Colonia</p>
+    </footer>
+
+    <script src="js/productos.js"></script>
+  </body>
+</html>

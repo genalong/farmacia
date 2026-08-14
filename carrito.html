@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Carrito | Farmacia Cormar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/carrito.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="img/farma.png" alt="Logo de Farmacia Cormar" />
+      </a>
+
+      <nav>
+        <a href="index.html"> Inicio </a>
+
+        <a href="productos.html"> Productos </a>
+
+        <a href="carrito.html"> Carrito </a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="carrito">
+        <h1>Tu carrito</h1>
+
+        <div id="carritoProductos"></div>
+
+        <div id="carritoResumen"></div>
+
+        <div id="formularioPedido" class="formulario-pedido">
+          <h2>Datos del pedido</h2>
+
+          <p>Completá tus datos para preparar el pedido.</p>
+
+          <form id="pedidoForm">
+            <div class="campo">
+              <label for="nombre"> Nombre completo </label>
+
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="telefono"> Teléfono </label>
+
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="direccion"> Dirección </label>
+
+              <input
+                type="text"
+                id="direccion"
+                name="direccion"
+                required
+                autocomplete="street-address"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="entrega"> Forma de entrega </label>
+
+              <select id="entrega" name="entrega" required>
+                <option value="">Seleccioná una opción</option>
+
+                <option value="retiro">Retiro en farmacia</option>
+
+                <option value="domicilio">Envío a domicilio</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="observaciones"> Observaciones </label>
+
+              <textarea
+                id="observaciones"
+                name="observaciones"
+                rows="4"
+                placeholder="Ej: tocar timbre, horario preferido, etc."
+              ></textarea>
+            </div>
+
+            <button type="submit">Confirmar pedido</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Farmacia Cormar — Juan Lacaze, Departamento de Colonia</p>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+  </body>
+</html>
