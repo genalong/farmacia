@@ -1,0 +1,142 @@
+.catalogo {
+  max-width: 1200px;
+}
+
+.catalogo-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.catalogo-header h1 {
+  font-size: 2.8rem;
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+
+.catalogo-header p:last-child {
+  color: var(--texto-suave);
+}
+
+.catalogo-controles {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.catalogo-controles input,
+.catalogo-controles select {
+  padding: 14px 16px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background-color: white;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+
+.catalogo-controles input {
+  flex: 1;
+}
+
+.catalogo-controles select {
+  min-width: 220px;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.producto-card {
+  background-color: white;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--crema-oscuro);
+}
+
+.producto-info {
+  padding: 20px;
+}
+
+.producto-categoria {
+  font-size: 0.75rem;
+  color: var(--ambar);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.producto-info h2 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.producto-precio {
+  color: var(--verde);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.producto-stock {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 15px;
+}
+
+.producto-info button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--verde);
+  color: white;
+  font-family: var(--sans);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.producto-info button:hover {
+  background-color: var(--verde-suave);
+}
+
+.sin-resultados {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: var(--texto-suave);
+}
+
+@media (max-width: 900px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogo-controles {
+    flex-direction: column;
+  }
+
+  .catalogo-controles select {
+    width: 100%;
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
